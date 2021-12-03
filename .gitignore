@@ -4,3 +4,4 @@
 /target/
 /debug/
 **/*.rs.bk
+*.obj
