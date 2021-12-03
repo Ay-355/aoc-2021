@@ -12,8 +12,7 @@ def part_two(lines: list):
     for l in lines:
         direction, amount = l.strip().split(" ")
         m[direction] += int(amount)
-        aim = m["down"] - m["up"]
-        if (direction == "forward") and aim != 0:
+        if direction == "forward" and (aim := m["down"] - m["up"]) != 0:
             depth += aim * int(amount)
     return m["forward"] * depth
 
